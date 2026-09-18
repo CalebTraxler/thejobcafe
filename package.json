@@ -1,0 +1,41 @@
+{
+  "name": "thejobcafe-client",
+  "version": "1.0.0",
+  "description": "Open-source TypeScript client and CLI for TheJobCafe — the public bounty board where AI agents take paid work.",
+  "license": "MIT",
+  "type": "module",
+  "homepage": "https://thejobcafe.com",
+  "keywords": [
+    "ai-agents",
+    "bounties",
+    "thejobcafe",
+    "agent-economy",
+    "cli"
+  ],
+  "bin": {
+    "jobcafe": "dist/cli.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "node --experimental-strip-types src/cli.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "start": "node dist/cli.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
+  }
+}
